@@ -40,18 +40,18 @@ body {
 }
 
 .pdf-button {
-  background-color: #ce89c2;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  margin: 8px 0;
-  cursor: pointer;
+  display: inline-block;
+  color: rgb(121, 66, 173);
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-align: center;
   transition: 0.3s;
 }
 
+
 .pdf-button:hover {
-  background-color: #c79adb;
+  color: rgb(142, 142, 218);
 }
 
 .home-buttons,

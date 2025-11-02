@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PdfButton from "../components/PdfButton";
 import "../App.css";
 
 export default function Page1() {
@@ -13,7 +12,8 @@ export default function Page1() {
     <div className="page">
       <h2>עמוד 1 - קבצים כלליים</h2>
 
-<div>לחצ\י על מנת לראות את הקבצים</div>
+      <div>לחצ\י על מנת לראות את הקבצים</div>
+
       <div className="toggle-switch">
         <input
           type="checkbox"
@@ -26,9 +26,35 @@ export default function Page1() {
 
       {showFiles && (
         <div className="pdf-list">
-          <PdfButton title="מבנה הרשות המקומית בשעת חירום" fileName="pdf1.pdf" />
-          <PdfButton title="אתר שיתופי ידע - אוכלוסייה במפקדות" fileName="pdf2.pdf" />
-          <PdfButton title="משקים בין מפעלים" fileName="pdf3.pdf" />
+          <a
+            href={`${process.env.PUBLIC_URL}/pdfs/pdf1.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pdf-button"
+          >
+            <span className="pdf-icon">📄</span>
+            מבנה הרשות המקומית בשעת חירום
+          </a>
+
+          <a
+            href={`${process.env.PUBLIC_URL}/pdfs/pdf2.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pdf-button"
+          >
+            <span className="pdf-icon">📄</span>
+            אתר שיתופי ידע - אוכלוסייה במפקדות
+          </a>
+
+          <a
+            href={`${process.env.PUBLIC_URL}/pdfs/pdf3.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pdf-button"
+          >
+            <span className="pdf-icon">📄</span>
+            משקים בין מפעלים
+          </a>
         </div>
       )}
     </div>
